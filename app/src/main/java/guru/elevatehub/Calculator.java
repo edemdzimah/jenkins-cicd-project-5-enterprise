@@ -17,4 +17,11 @@ public class Calculator {
 
 public int multiply(int a, int b) {
     return a * b;
+
+@Test
+public void testMultiply() {
+    Calculator calc = new Calculator();
+    assertEquals(12, calc.multiply(3, 4));
+}
+
 }
