@@ -60,7 +60,7 @@ public void riskyMethod() {
         try {
             int x = 1 / 0;
         } catch (Exception e) {
-            // empty catch - SonarQube will flag this
+            System.err.println("Error: " + e.getMessage());
         }
     }
     private static Map<String, String> queryParams(URI uri) {
