@@ -56,6 +56,13 @@ public class App {
         }
     }
 
+public void riskyMethod() {
+        try {
+            int x = 1 / 0;
+        } catch (Exception e) {
+            // empty catch - SonarQube will flag this
+        }
+    }
     private static Map<String, String> queryParams(URI uri) {
         Map<String, String> params = new HashMap<>();
         String query = uri.getQuery();
