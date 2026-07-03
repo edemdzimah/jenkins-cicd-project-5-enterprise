@@ -15,7 +15,7 @@ public class App {
         HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
         server.createContext("/", exchange ->
                 respond(exchange, 200,
-                        "{\"message\":\"CI/CD Project 5 deployed automatically via Jenkins to EKS\",\"status\":\"ok\"}"));
+                        "{\"message\":\"Version 2 - Rolling update complete via Jenkins CI/CD on EKS\",\"status\":\"ok\"}"));
         server.createContext("/health", exchange ->
                 respond(exchange, 200, "{\"status\":\"healthy\"}"));
         server.createContext("/add", exchange -> {
